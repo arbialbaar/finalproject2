@@ -1,0 +1,84 @@
+#formasi{
+    margin-top: -16px;
+}
+
+#formasi{
+    margin-top: -16px;
+}
+
+body{
+    background-image: url('../img/White-Background.jpg');
+    background-attachment: fixed;
+}
+
+.navdrone{
+    background-color: gray;
+}
+
+#font1{
+    font-size: 25px;
+    font-family: 'MuseoModerno', cursive;
+}
+
+#font{
+    font-size: 15px;
+    font-family: 'MuseoModerno', cursive;
+}
+
+.compro{
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+#compro{
+    margin-top: 80px;  
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#btn{
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.imgabout{
+    border-radius: 20px;
+    width: 100%;
+}
+
+#aboutvh{
+    font-family: 'Lato', sans-serif;
+}
+
+.icon{
+    margin-right: 20px;
+}
+
+#foot{
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+#jumbo{
+    background-image: url('../img/drone3.jpg');
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+#icon{
+    margin-top: 20px;
+}
+
+hr.solid {
+    border-top: 3px solid;
+}
+
+#card{
+    font-family: 'Lato', sans-serif;
+}
