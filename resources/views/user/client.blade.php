@@ -14,9 +14,11 @@
 
 <div class="container my-5">
     <div class="row">
+        {{-- @foreach ($client as $item)
         <div class="col-md-3">
-            <img src="/img/drone1.jpg" class="card-img-top" alt="...">
+            <img src="{{ $item->image_client }}" class="card-img-top" alt="...">
         </div>
+        @endforeach --}}
     </div>    
 </div>
 

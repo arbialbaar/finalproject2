@@ -6,7 +6,8 @@
     <div class="col-md-12">
         <h1 class="text-center">Data Product</h1>
         <hr>
-        <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
+            @method('PATCH')
             @csrf            
             <div class="form-group">
                 <label for="image_product">Foto</label>
@@ -18,7 +19,7 @@
 
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title')}}">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') ?? $product->title }}">
             </div>
             @error('title')
                 <div class="text-center">{{ $message }}</div>
@@ -27,7 +28,7 @@
             <div class="form-group">
                 <label for="description">Description</label>
                 <textarea class="form-control" name="description" id="description" rows="5">
-                    {{ old('description')}}
+                    {{ old('description') ?? $product->description }}
                 </textarea>
               </div>
             @error('description')
@@ -39,7 +40,4 @@
     </div>
 </div>
 
-
-
 @endsection
-

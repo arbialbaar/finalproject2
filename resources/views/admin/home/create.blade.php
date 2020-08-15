@@ -9,7 +9,7 @@
     <hr>
 
     <!-- Create Form -->
-        <form action="{{ route('home.store') }}" method="POST">
+        <form action="{{ route('admin.home.store') }}" method="POST">
              @csrf
              <!-- First Row -->
              <div class="row">
@@ -24,7 +24,7 @@
                  </div>
                  <div class="col-md-6">
                     <div class="form-group">
-                        <label for="brand_desc">Deskrips</label>
+                        <label for="brand_desc">Deskripsi</label>
                         <input type="text" class="form-control @error('brand_desc') is-invalid @enderror" id="brand_desc" name="brand_desc" value="{{ old('brand_desc') }}" >
                         @error('brand_desc')
                             <div class="text-danger">{{ $message }}</div>

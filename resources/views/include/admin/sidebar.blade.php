@@ -1,10 +1,10 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    {{--  <a href="index3.html" class="brand-link">
       <img src="/adminlte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
+    </a>  --}}
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/admin/home" class="nav-link  @yield('menuHome')">
+            <a href="/admin" class="nav-link  @yield('menuHome')">
               <i class="nav-icon 	fas fa-home"></i>
               <p>
                 Home
@@ -40,7 +40,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/admin/client" class="nav-link @yield('menuClient')">
+                <a href="/client" class="nav-link @yield('menuClient')">
                   <i class="nav-icon fas fa-book-reader"></i>
                   <p>
                     Client
@@ -48,7 +48,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/contact-us" class="nav-link @yield('menuContact')">
+                <a href="/contact" class="nav-link @yield('menuContact')">
                   <i class="nav-icon fas fa-address-book"></i>
                   <p>
                     Contact Us
@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li class="nav-item">
-              <a href="/admin/footer" class="nav-link @yield('menuFooter')">
+              <a href="/footer" class="nav-link @yield('menuFooter')">
               <i class="nav-icon 	fas fa-copyright"></i>
               <p>
                   Footer
