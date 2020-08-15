@@ -21,11 +21,11 @@
 
             <div class="col-md-3">
                 <h3>Address</h3>
-                @forelse ($footer as $item)
+                {{--  @forelse ($footer as $item)
                         <p>{{ $item->address }}</p>
                 @empty
                         <td colspan="9" class="text-center">Data Kosong</td>
-                @endforelse
+                @endforelse  --}}
             </div>
 
             <div class="col-md-3">

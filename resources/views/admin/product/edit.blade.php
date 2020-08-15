@@ -8,14 +8,7 @@
         <hr>
         <form action="{{ route('admin.product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
             @method('PATCH')
-            @csrf            
-            <div class="form-group">
-                <label for="image_product">Foto</label>
-                <input type="file" name="image_product" class="form-control">
-            </div>
-            @error('image_product')
-                <div class="text-center">{{ $message }}</div>
-            @enderror
+            @csrf
 
             <div class="form-group">
                 <label for="title">Title</label>

@@ -22,6 +22,7 @@ Route::get('/', 'IndexController@home')->name('home.home');
 Route::get('/product', 'IndexController@product')->name('home.product');
 Route::get('/clients', 'IndexController@client')->name('home.client');
 Route::get('/contact-us', 'IndexController@contact')->name('home.contact');
+// Route::get('/gallery', 'IndexController@gallery')->name('home.gallery');
 
 
 //auth
@@ -48,6 +49,9 @@ Route::resource('/contact', 'ContactController');
 
 // client
 Route::resource('/client', 'ClientController');
+
+//
+Route::resource('/gallery', 'GalleryController');
 
 // Route::prefix('admin')->group(function () {
 //     Route::get('',);

@@ -7,6 +7,7 @@ use App\Home;
 use App\Contact;
 use App\Client;
 use App\Product;
+use App\Gallery;
 
 class IndexController extends Controller
 {
@@ -16,8 +17,14 @@ class IndexController extends Controller
     }
 
     public function product(){
+        $gallery = Gallery::all();
         $product = Product::all();
-        return view('user.product', compact('product'));
+        return view('user.product', compact('product','gallery'));
+    }
+
+    public function gallery(){
+        $gallery = Gallery::all();
+        return view('user.gallery', compact('gallery'));
     }
 
     public function client(){

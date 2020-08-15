@@ -40,6 +40,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="/gallery" class="nav-link @yield('menuNavbar')">
+                <i class="nav-icon fas fa-image"></i>
+                <p>
+                    Gallery
+                </p>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="/client" class="nav-link @yield('menuClient')">
                   <i class="nav-icon fas fa-book-reader"></i>
                   <p>
@@ -55,14 +63,6 @@
                   </p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="/admin/navbar" class="nav-link @yield('menuNavbar')">
-                <i class="nav-icon fas fa-tasks"></i>
-                <p>
-                    Navbar
-                </p>
-                </a>
-            </li>
             <li class="nav-item">
               <a href="/footer" class="nav-link @yield('menuFooter')">
               <i class="nav-icon 	fas fa-copyright"></i>
