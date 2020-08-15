@@ -21,19 +21,22 @@ class IndexController extends Controller
 
 
     public function product(){
+        $footer = footer::all();
         $gallery = Gallery::all();
         $product = Product::all();
-        return view('user.product', compact('product','gallery'));
+        return view('user.product', compact('product','gallery','footer'));
     }
 
     public function gallery(){
+        $footer = footer::all();
         $gallery = Gallery::all();
-        return view('user.gallery', compact('gallery'));
+        return view('user.gallery', compact('gallery','footer'));
     }
 
     public function client(){
+        $footer = footer::all();
         $client = Client::all();
-        return view('user.client', compact('client'));
+        return view('user.client', compact('client','footer'));
     }
 
     public function contact(){
