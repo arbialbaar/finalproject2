@@ -1,5 +1,5 @@
 @extends('layout.admin')
-@section('menuContact', 'active')
+@section('menuPesan', 'active')
 @section('content')
 
 <div class="container mt-3">
