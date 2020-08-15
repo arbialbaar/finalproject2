@@ -8,11 +8,15 @@ use App\Home;
 
 class HomeController extends Controller
 {
-    public function index(){
-        $home = Home::all();
-        return view('admin.home.index',compact('home'));
+    public function __construct(){
+        $this->middleware('auth');
     }
-    
+
+    public function index(){
+        $homes = Home::all();
+        return view('admin.home.index', compact('homes'));
+    }
+
     public function create(){
         return view('admin.home.create');
     }
@@ -20,33 +24,41 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'brand' => '',
-            'brand_desc' => '',
-            'visi' => '',
-            'misi' => ''
+            'brand' => 'required',
+            'brand_desc' => 'required',
+            'visi' => 'required',
+            'misi' => 'required'
         ]);
-        $home = Home::create($validateData);
-        $home->save();
-        $request->session()->flash('pesan',"Data berhasil disimpan");
+        Home::create($validateData);
+        // $homes->save();
+        // $request->session()->flash('pesan',"Data berhasil disimpan");
         // return redirect()->route('karyawan.index')->withSuccess("Data {$validateData['nama']} Berhasil Disimpan");
-        return redirect()->route('admin.home.index');
+        return redirect('/admin')->with('pesan', "Data Berhasil Ditambahkan");
     }
 
-    public function edit(Home $home){
-        return view('admin.home.edit', compact('home'));
+    public function edit($id){
+        $homes = Home::where('id', $id)->first();
+        return view('admin.home.edit', compact('homes'));
     }
 
     public function update(Request $request, Home $home)
     {
-        $validateData = $request->validate([
-            'brand' => '',
-            'brand_desc' => '',
-            'visi' => '',
-            'misi' => ''
-        ]);
-        $home->update($validateData);
-        $home->save();
-        return redirect()->route('home.index',['home' => $home->id])->with('pesan',"Update Data Berhasil");
+        $dataId = $home->find($home->id);
+        $data = $request->all();
+        // $validateData = $request->validate([
+        //     'brand' => 'required',
+        //     'brand_desc' => 'required',
+        //     'visi' => 'required',
+        //     'misi' => 'required'
+        // ]);
+        $home->update($data);
+        session()->flash('edit', "Data Berhasil Diupdate");
+        // $homes->save();
+        return redirect()->route('admin.home.index',['home' => $home->id])->with('pesan',"Update Data Berhasil");
     }
 
+    public function delete(Home $home){
+        $home->delete();
+        return redirect('/admin')->with('pesan', "Data berhasil Dihapus");
+    }
 }

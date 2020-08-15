@@ -1,5 +1,5 @@
 @extends('layout.admin')
-@section('menuHome', 'active')
+@section('menuContact', 'active')
 @section('content')
 
 <div class="container mt-3">
@@ -9,7 +9,7 @@
             <!-- Content Header -->
             <div class="py-4">
                 <h2>Tabel data halaman home</h2>
-                <a href="{{ route('admin.home.create') }}" class="btn btn-primary">
+                <a href="{{ route('contact.create') }}" class="btn btn-primary">
                     Tambah Data
                 </a>
             </div>
@@ -24,34 +24,26 @@
             <!-- Karyawan Index Table -->
             <table id="myTable" class="display table table-striped">
                 <thead>
-                    <th>Brand Name</th>
-                    <th>Description</th>
-                    <th>Visi</th>
-                    <th>Misi</th>
-                    <th>Action</th>
+                    <th>Alamat</th>
+                    <th>Admin</th>
+                    <th>No Hp</th>
                 </thead>
                 <tbody>
-                    @forelse ($homes as $item)
+                    @forelse ($contact as $item)
                     <tr>
-                        <td>{{$item->brand}}</td>
-                        <td>{{$item->brand_desc}}</td>
-                        <td>{{$item->visi}}</td>
-                        <td>{{$item->misi}}</td>
+                        <td>{{$item->alamat}}</td>
+                        <td>{{$item->admin}}</td>
+                        <td>{{$item->no_hp}}</td>
                         <td>
                             <!-- Edit Button -->
-                            <a href="{{ route('admin.home.edit',['home' => $item->id]) }}" class="btn btn-primary" id="btn">
+                            <a href="{{ route('contact.edit',['contact' => $item->id]) }}" class="btn btn-primary" id="btn">
                                 Edit
                             </a>
-                            <form action="{{ route('admin.home.destroy',['home' => $item->id]) }}" method="POST">
+                            <form action="{{ route('contact.destroy',['contact' => $item->id]) }}" method="POST">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?');">Hapus</button>
                             </form>
-                            {{-- <form method="GET">
-                                @method('DELETE')
-                                @csrf
-                                <a href="/admin/homes/{$item->id}" class="btn btn-danger" method="DELETE" onclick="return confirm('yakin?');">Hapus</a>
-                            </form> --}}
                         </td>
                     </tr>
                     @empty

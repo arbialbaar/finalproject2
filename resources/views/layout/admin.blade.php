@@ -12,9 +12,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>AdminLTE 3 | Starter</title>
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{ assset('/adminlte/plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/adminlte/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ assset('/adminlte/dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/adminlte/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -24,20 +24,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Navbar -->
     @include('include/admin/navbar')
     <!-- /.navbar -->
-  
+
     <!-- Main Sidebar Container -->
     @include('include/admin/sidebar')
-  
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-  
+
       <!-- Main content -->
         @yield('content')
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-  
-  
+
+
     <!-- Main Footer -->
     @include('include/admin/footer')
   </div>
@@ -46,10 +46,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="{{ assset('/adminlte/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('/adminlte/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ assset('/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ assset('/adminlte/dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('/adminlte/dist/js/adminlte.min.js') }}"></script>
 </body>
 </html>

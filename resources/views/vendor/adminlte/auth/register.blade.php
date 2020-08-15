@@ -83,6 +83,23 @@
             @endif
         </div>
 
+        <div class="form-group row">
+            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('role') }}</label>
+
+            <div class="col-md-6">
+                <select name="role" id="role" class="form-control @error('role') @enderror">
+
+                    <option value="user">User</option>
+                </select>
+
+                @error('role')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
         {{-- Register button --}}
         <button type="submit" class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
             <span class="fas fa-user-plus"></span>

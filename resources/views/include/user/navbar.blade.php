@@ -12,7 +12,7 @@
           <a class="nav-link @yield('menuProduct')" href="/product" id="font">Product</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link @yield('menuClient')" href="/client" id="font">Client</a>
+            <a class="nav-link @yield('menuClient')" href="/clients" id="font">Client</a>
           </li>
         <li class="nav-item">
           <a class="nav-link @yield('menuContact')" href="/contact-us" id="font">Contact us</a>
