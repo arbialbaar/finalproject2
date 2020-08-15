@@ -4,9 +4,6 @@
 @section('content')
 
 @foreach ($home as $item)
-// kerangka footer mana?
-// buat relasi antara produk dengan gambar
-// input contact masuk ke admin no edit
 
 <div class="jumbotron-fluid bg-secondary text-light py-5 px-5 text-center" id="compro">
     <div class="row py-5">
@@ -34,6 +31,8 @@
         </div>
     </div>
 </div>
+
+
 
 @endforeach
 

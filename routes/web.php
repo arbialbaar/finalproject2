@@ -52,6 +52,8 @@ Route::resource('/client', 'ClientController');
 
 //
 Route::resource('/gallery', 'GalleryController');
+// Pesan
+Route::resource('/pesan', 'PesanController');
 
 // Route::prefix('admin')->group(function () {
 //     Route::get('',);

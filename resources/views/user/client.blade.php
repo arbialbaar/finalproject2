@@ -1,6 +1,6 @@
 @extends('layout.user')
 @section('title', 'TaniTech')
-@section('menuClient', 'active')  
+@section('menuClient', 'active')
 @section('content')
 
 <div class="jumbotron-fluid bg-secondary text-light py-5 px-5 text-center" id="compro">
@@ -14,12 +14,12 @@
 
 <div class="container my-5">
     <div class="row">
-        {{-- @foreach ($client as $item)
+        @foreach ($client as $item)
         <div class="col-md-3">
-            <img src="{{ $item->image_client }}" class="card-img-top" alt="...">
+            <img src="{{ Storage::url($item->image_client) }}" class="card-img-top" alt="...">
         </div>
-        @endforeach --}}
-    </div>    
+        @endforeach
+    </div>
 </div>
 
 @endsection

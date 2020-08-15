@@ -1,5 +1,5 @@
 @extends('layout.admin')
-@section('menuFooter', 'active')
+@section('menuPesan', 'active')
 @section('content')
 
 <div class="container mt-3">
@@ -8,34 +8,27 @@
 
             <!-- Content Header -->
             <div class="py-4">
-                <h2>Halaman Footer</h2>
-                <a href="{{ route('footer.create') }}" class="btn btn-primary">
-                    Tambah Data
-                </a>
+                <h2>Tabel data halaman pesan</h2>
             </div>
 
-            <!-- Alert -->
-            @if (session()->has('pesan'))
-                <div class="alert alert-success">
-                    {{ session()->get('pesan') }}
-                </div>
-            @endif
 
             <!-- Karyawan Index Table -->
             <table id="myTable" class="display table table-striped">
                 <thead>
-                    <th>Deskripsi Alamat</th>
+                    <th>Pesan</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>No Hp</th>
                 </thead>
                 <tbody>
-                    @forelse ($footer as $item)
+                    @forelse ($pesan as $item)
                     <tr>
-                        <td>{{$item->address}}</td>
+                        <td>{{$item->pesan}}</td>
+                        <td>{{$item->nama}}</td>
+                        <td>{{$item->email}}</td>
+                        <td>{{$item->no_hp}}</td>
                         <td>
-                            <!-- Edit Button -->
-                            <a href="{{ route('footer.edit',['footer' => $item->id]) }}" class="btn btn-primary" id="btn">
-                                Edit
-                            </a>
-                            <form action="{{ route('footer.destroy',['footer' => $item->id]) }}" method="POST">
+                            <form action="{{ route('pesan.destroy',['pesan' => $item->id]) }}" method="POST">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('yakin?');">Hapus</button>
