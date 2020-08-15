@@ -49,6 +49,9 @@ Route::resource('/contact', 'ContactController');
 // client
 Route::resource('/client', 'ClientController');
 
+// Pesan
+Route::resource('/pesan', 'PesanController');
+
 // Route::prefix('admin')->group(function () {
 //     Route::get('',);
 // });

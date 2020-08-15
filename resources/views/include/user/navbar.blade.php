@@ -5,7 +5,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end  px-5" id="navbarNav">
       <ul class="navbar-nav ">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link @yield('menuHome')" href="/" id="font">Home</a>
         </li>
         <li class="nav-item">

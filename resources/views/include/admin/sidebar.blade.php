@@ -71,6 +71,14 @@
               </p>
               </a>
           </li>
+          <li class="nav-item">
+            <a href="/pesan" class="nav-link @yield('menuPesan')">
+            <i class="nav-icon 	fas fa-envelope"></i>
+            <p>
+                Pesan
+            </p>
+            </a>
+        </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
