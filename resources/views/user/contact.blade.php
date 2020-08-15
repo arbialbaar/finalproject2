@@ -3,7 +3,7 @@
 @section('menuContact', 'active')  
 @section('content')
 
-<div class="jumbotron-fluid bg-secondary text-light py-5 px-5 text-center" id="compro">
+<div class="jumbotron-fluid bg-secondary text-light py-5 px-5 text-center">
     <div class="row py-5">
         <div class="col-md-12 py-5">
             <h1 class="compro">Contact Us</h1>
